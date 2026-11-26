@@ -1,4 +1,4 @@
-"""Small pure policy helper (Task 2)."""
+"""Small policy helper (Task 2)."""
 
 from __future__ import annotations
 
