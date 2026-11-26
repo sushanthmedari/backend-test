@@ -1,4 +1,8 @@
-"""Item reads/writes."""
+"""Item reads/writes.
+
+Task 1 also looks here: after changing rows, SQLite needs `conn.commit()`
+for other connections (or a later reopen) to see the data.
+"""
 
 from __future__ import annotations
 

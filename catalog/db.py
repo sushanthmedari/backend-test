@@ -1,6 +1,20 @@
 """SQLite access for the exercise store.
 
 Task 1 focuses here: the database layer does not work correctly yet.
+
+Quick orientation (prior SQLite experience not required):
+  - SQLite is a local file database. Python talks to it with the built-in
+    `sqlite3` module — no server to install.
+  - `sqlite3.connect(...)` expects a **filesystem path** (or ":memory:"),
+    e.g. Path("catalog.db") or "/tmp/exercise.db".
+  - Config here may look like a URL: `sqlite:///some/path.db`. That is a
+    common app style, but it is **not** a raw path. Use
+    `database_path_from_url(...)` (already implemented below) to turn the
+    URL into a Path, then connect to that path.
+  - After INSERT/UPDATE, call `conn.commit()` or the change can disappear
+    when the connection closes (even if it looked fine on the same connection).
+
+Fix `connect()` (and durable writes in catalog/repository.py). Do not change tests.
 """
 
 from __future__ import annotations

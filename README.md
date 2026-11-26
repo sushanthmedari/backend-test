@@ -39,8 +39,10 @@ Something is wrong in the database layer under `catalog/`.
 - Stay on stdlib `sqlite3` (no Postgres, no ORM required).
 - Do not change the tests.
 
-Success: Task 1 tests green (`./run_tests.sh tests/
-test_task1_debug.py` or `run_tests.bat tests/test_task1_debug.py`).
+Short SQLite primer is at the top of `catalog/db.py` (path vs URL, `commit`).
+No prior SQLite experience expected.
+
+Success: `tests/test_task1_debug.py` green.
 
 ## Task 2 — Policy (~5–10 minutes)
 
